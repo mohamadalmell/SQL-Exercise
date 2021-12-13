@@ -71,7 +71,7 @@ WHERE employees.role='Graphic Designer'
 #Count and Filter
 
 #1)Find the person with the highest number of points in students
-SELECT max(points)
+SELECT name, max(points)
 FROM students
 
 #2)Find the average of points in students
