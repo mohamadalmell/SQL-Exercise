@@ -50,3 +50,20 @@ WHERE ID=1
 DELETE FROM students
 WHERE id=4
 
+#Joins
+#1)Produce a table that contains, for each employee, his/her name, company name, and company date.
+SELECT employees.Name, employees.Company, companies.Date 
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company;
+
+#2)Find the name of employees that work in companies made before 2000.
+SELECT employees.Name, employees.Company, companies.Date 
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company
+WHERE companies.DATE<2000
+
+#3)Find the name of company that has a graphic designer.
+SELECT employees.Company
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company
+WHERE employees.role='Graphic Designer'
